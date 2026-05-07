@@ -10,7 +10,7 @@ z2
 cModel Technology
 dD:/electric_sims/intelFPGA/20.1/projects/counter
 vbutton_conditioner
-Z0 !s110 1778151523
+Z0 !s110 1778153856
 !i10b 1
 !s100 6Yn@>f4ck[DZkCOz5VGPe1
 Z1 !s11b Dg1SIo80bB@j0V0VzS_@n1
@@ -20,13 +20,13 @@ Z3 dD:/electric_sims/intelFPGA/20.1/projects/ASPS-VP
 Z4 w1778142780
 8D:/electric_sims/intelFPGA/20.1/projects/ASPS-VP/button_conditioner.v
 FD:/electric_sims/intelFPGA/20.1/projects/ASPS-VP/button_conditioner.v
-!i122 144
+!i122 158
 Z5 L0 1 23
 Z6 OV;L;2020.1;71
 r1
 !s85 0
 31
-Z7 !s108 1778151523.000000
+Z7 !s108 1778153856.000000
 !s107 D:/electric_sims/intelFPGA/20.1/projects/ASPS-VP/button_conditioner.v|
 !s90 -reportprogress|300|-work|work|-stats=none|D:/electric_sims/intelFPGA/20.1/projects/ASPS-VP/button_conditioner.v|
 !i113 1
@@ -43,7 +43,7 @@ R3
 R4
 8D:/electric_sims/intelFPGA/20.1/projects/ASPS-VP/car_counter_fsm.v
 FD:/electric_sims/intelFPGA/20.1/projects/ASPS-VP/car_counter_fsm.v
-!i122 145
+!i122 159
 L0 1 65
 R6
 r1
@@ -68,7 +68,7 @@ R3
 w1778151521
 8D:/electric_sims/intelFPGA/20.1/projects/ASPS-VP/clock_divider.v
 FD:/electric_sims/intelFPGA/20.1/projects/ASPS-VP/clock_divider.v
-!i122 140
+!i122 154
 L0 1 27
 R6
 r1
@@ -91,7 +91,7 @@ R3
 w1778139447
 8D:/electric_sims/intelFPGA/20.1/projects/ASPS-VP/d_ff.v
 FD:/electric_sims/intelFPGA/20.1/projects/ASPS-VP/d_ff.v
-!i122 141
+!i122 155
 Z10 L0 1 12
 R6
 r1
@@ -114,7 +114,7 @@ R3
 Z11 w1778140668
 8D:/electric_sims/intelFPGA/20.1/projects/ASPS-VP/edge_detector.v
 FD:/electric_sims/intelFPGA/20.1/projects/ASPS-VP/edge_detector.v
-!i122 143
+!i122 157
 R10
 R6
 r1
@@ -127,7 +127,7 @@ R7
 R8
 R9
 vglobal_timer
-Z12 !s110 1778151524
+Z12 !s110 1778153857
 !i10b 1
 !s100 7Y=g^HOe<YDc6JL?l_g`:3
 R1
@@ -137,13 +137,13 @@ R3
 Z13 w1778151279
 8D:/electric_sims/intelFPGA/20.1/projects/ASPS-VP/global_timer.v
 FD:/electric_sims/intelFPGA/20.1/projects/ASPS-VP/global_timer.v
-!i122 147
+!i122 161
 R10
 R6
 r1
 !s85 0
 31
-!s108 1778151524.000000
+Z14 !s108 1778153857.000000
 !s107 D:/electric_sims/intelFPGA/20.1/projects/ASPS-VP/global_timer.v|
 !s90 -reportprogress|300|-work|work|-stats=none|D:/electric_sims/intelFPGA/20.1/projects/ASPS-VP/global_timer.v|
 !i113 1
@@ -160,7 +160,7 @@ R3
 w1778139285
 8D:/electric_sims/intelFPGA/20.1/projects/ASPS-VP/sevenSegments.v
 FD:/electric_sims/intelFPGA/20.1/projects/ASPS-VP/sevenSegments.v
-!i122 139
+!i122 153
 R5
 R6
 r1
@@ -184,7 +184,7 @@ R3
 R11
 8D:/electric_sims/intelFPGA/20.1/projects/ASPS-VP/synchronizer.v
 FD:/electric_sims/intelFPGA/20.1/projects/ASPS-VP/synchronizer.v
-!i122 142
+!i122 156
 R10
 R6
 r1
@@ -207,7 +207,7 @@ R3
 w1778143545
 8D:/electric_sims/intelFPGA/20.1/projects/ASPS-VP/tb_car_counter.v
 FD:/electric_sims/intelFPGA/20.1/projects/ASPS-VP/tb_car_counter.v
-!i122 146
+!i122 160
 L0 3 54
 R6
 r1
@@ -220,46 +220,48 @@ R7
 R8
 R9
 vtb_timestamp_buffer
-Z14 !s110 1778151756
+R12
 !i10b 1
 !s100 H3ZA]J3m5HPee?nkWbKd@3
 R1
-IiUEldRgjEfbVGH@akoHc11
+IH]abz`Xg=L^aeOAmS^z[53
 R2
 R3
-w1778151439
-8tb_timestamp_buffer.v
-Ftb_timestamp_buffer.v
-!i122 152
+w1778153717
+8D:\electric_sims\intelFPGA\20.1\projects\ASPS-VP\tb_timestamp_buffer.v
+FD:\electric_sims\intelFPGA\20.1\projects\ASPS-VP\tb_timestamp_buffer.v
+!i122 163
 L0 3 74
 R6
 r1
 !s85 0
 31
-Z15 !s108 1778151756.000000
-!s107 tb_timestamp_buffer.v|timestamp_buffer.v|
-Z16 !s90 -reportprogress|300|timestamp_buffer.v|tb_timestamp_buffer.v|
+R14
+!s107 D:\electric_sims\intelFPGA\20.1\projects\ASPS-VP\tb_timestamp_buffer.v|
+!s90 -reportprogress|300|-work|work|-stats=none|D:\electric_sims\intelFPGA\20.1\projects\ASPS-VP\tb_timestamp_buffer.v|
 !i113 1
+R8
 R9
 vtimestamp_buffer
-R14
+R12
 !i10b 1
 !s100 >^8dZTEmZhIc0h4_SJWHi0
 R1
-I=?Ge`]8@b@^MbW2;LdHSk0
+I5?=V^QVRDDK1gD^KIIkFn2
 R2
 R3
 R13
-8timestamp_buffer.v
-Ftimestamp_buffer.v
-!i122 152
+8D:/electric_sims/intelFPGA/20.1/projects/ASPS-VP/timestamp_buffer.v
+FD:/electric_sims/intelFPGA/20.1/projects/ASPS-VP/timestamp_buffer.v
+!i122 162
 L0 1 34
 R6
 r1
 !s85 0
 31
-R15
-Z17 !s107 tb_timestamp_buffer.v|timestamp_buffer.v|
-R16
+R14
+!s107 D:/electric_sims/intelFPGA/20.1/projects/ASPS-VP/timestamp_buffer.v|
+!s90 -reportprogress|300|-work|work|-stats=none|D:/electric_sims/intelFPGA/20.1/projects/ASPS-VP/timestamp_buffer.v|
 !i113 1
+R8
 R9
