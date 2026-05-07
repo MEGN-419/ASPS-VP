@@ -10,7 +10,7 @@ z2
 cModel Technology
 dD:/electric_sims/intelFPGA/20.1/projects/counter
 vbutton_conditioner
-Z0 !s110 1778153856
+Z0 !s110 1778156171
 !i10b 1
 !s100 6Yn@>f4ck[DZkCOz5VGPe1
 Z1 !s11b Dg1SIo80bB@j0V0VzS_@n1
@@ -20,20 +20,20 @@ Z3 dD:/electric_sims/intelFPGA/20.1/projects/ASPS-VP
 Z4 w1778142780
 8D:/electric_sims/intelFPGA/20.1/projects/ASPS-VP/button_conditioner.v
 FD:/electric_sims/intelFPGA/20.1/projects/ASPS-VP/button_conditioner.v
-!i122 158
+!i122 181
 Z5 L0 1 23
 Z6 OV;L;2020.1;71
 r1
 !s85 0
 31
-Z7 !s108 1778153856.000000
+Z7 !s108 1778156171.000000
 !s107 D:/electric_sims/intelFPGA/20.1/projects/ASPS-VP/button_conditioner.v|
 !s90 -reportprogress|300|-work|work|-stats=none|D:/electric_sims/intelFPGA/20.1/projects/ASPS-VP/button_conditioner.v|
 !i113 1
 Z8 o-work work
 Z9 tCvgOpt 0
 vcar_counter_fsm
-R0
+Z10 !s110 1778156172
 !i10b 1
 !s100 E5;a;N:bLR7jf<S[3>3am1
 R1
@@ -43,7 +43,7 @@ R3
 R4
 8D:/electric_sims/intelFPGA/20.1/projects/ASPS-VP/car_counter_fsm.v
 FD:/electric_sims/intelFPGA/20.1/projects/ASPS-VP/car_counter_fsm.v
-!i122 159
+!i122 182
 L0 1 65
 R6
 r1
@@ -68,7 +68,7 @@ R3
 w1778151521
 8D:/electric_sims/intelFPGA/20.1/projects/ASPS-VP/clock_divider.v
 FD:/electric_sims/intelFPGA/20.1/projects/ASPS-VP/clock_divider.v
-!i122 154
+!i122 177
 L0 1 27
 R6
 r1
@@ -79,6 +79,28 @@ R7
 !s90 -reportprogress|300|-work|work|-sv|-stats=none|D:/electric_sims/intelFPGA/20.1/projects/ASPS-VP/clock_divider.v|
 !i113 1
 o-work work -sv
+R9
+vcost_calculator
+Z11 !s110 1778156182
+!i10b 1
+!s100 9@3Jb4ISJ=4ZSJT0j:]QW3
+R1
+I^[0^lfZbd^DHc:=4o^l=B1
+R2
+R3
+w1778155463
+8cost_calculator.v
+Fcost_calculator.v
+!i122 189
+L0 1 14
+R6
+r1
+!s85 0
+31
+Z12 !s108 1778156182.000000
+!s107 tb_cost_calculator.v|cost_calculator.v|
+Z13 !s90 -reportprogress|300|cost_calculator.v|tb_cost_calculator.v|
+!i113 1
 R9
 vd_ff
 R0
@@ -91,8 +113,8 @@ R3
 w1778139447
 8D:/electric_sims/intelFPGA/20.1/projects/ASPS-VP/d_ff.v
 FD:/electric_sims/intelFPGA/20.1/projects/ASPS-VP/d_ff.v
-!i122 155
-Z10 L0 1 12
+!i122 178
+Z14 L0 1 12
 R6
 r1
 !s85 0
@@ -111,11 +133,11 @@ R1
 I584SHdQZVeCNJLdDTz`Jb1
 R2
 R3
-Z11 w1778140668
+Z15 w1778140668
 8D:/electric_sims/intelFPGA/20.1/projects/ASPS-VP/edge_detector.v
 FD:/electric_sims/intelFPGA/20.1/projects/ASPS-VP/edge_detector.v
-!i122 157
-R10
+!i122 180
+R14
 R6
 r1
 !s85 0
@@ -127,23 +149,23 @@ R7
 R8
 R9
 vglobal_timer
-Z12 !s110 1778153857
+R10
 !i10b 1
 !s100 7Y=g^HOe<YDc6JL?l_g`:3
 R1
 I^Cab`3C[PobdH@d@SHz9I0
 R2
 R3
-Z13 w1778151279
+Z16 w1778151279
 8D:/electric_sims/intelFPGA/20.1/projects/ASPS-VP/global_timer.v
 FD:/electric_sims/intelFPGA/20.1/projects/ASPS-VP/global_timer.v
-!i122 161
-R10
+!i122 184
+R14
 R6
 r1
 !s85 0
 31
-Z14 !s108 1778153857.000000
+Z17 !s108 1778156172.000000
 !s107 D:/electric_sims/intelFPGA/20.1/projects/ASPS-VP/global_timer.v|
 !s90 -reportprogress|300|-work|work|-stats=none|D:/electric_sims/intelFPGA/20.1/projects/ASPS-VP/global_timer.v|
 !i113 1
@@ -160,7 +182,7 @@ R3
 w1778139285
 8D:/electric_sims/intelFPGA/20.1/projects/ASPS-VP/sevenSegments.v
 FD:/electric_sims/intelFPGA/20.1/projects/ASPS-VP/sevenSegments.v
-!i122 153
+!i122 176
 R5
 R6
 r1
@@ -181,11 +203,11 @@ R1
 IbLN]=`9UJcWN<nm];=5YW0
 R2
 R3
-R11
+R15
 8D:/electric_sims/intelFPGA/20.1/projects/ASPS-VP/synchronizer.v
 FD:/electric_sims/intelFPGA/20.1/projects/ASPS-VP/synchronizer.v
-!i122 156
-R10
+!i122 179
+R14
 R6
 r1
 !s85 0
@@ -197,7 +219,7 @@ R7
 R8
 R9
 vtb_car_counter
-R12
+R10
 !i10b 1
 !s100 ??;bN[bnG57TlGULWKH`B1
 R1
@@ -207,20 +229,42 @@ R3
 w1778143545
 8D:/electric_sims/intelFPGA/20.1/projects/ASPS-VP/tb_car_counter.v
 FD:/electric_sims/intelFPGA/20.1/projects/ASPS-VP/tb_car_counter.v
-!i122 160
+!i122 183
 L0 3 54
 R6
 r1
 !s85 0
 31
-R7
+R17
 !s107 D:/electric_sims/intelFPGA/20.1/projects/ASPS-VP/tb_car_counter.v|
 !s90 -reportprogress|300|-work|work|-stats=none|D:/electric_sims/intelFPGA/20.1/projects/ASPS-VP/tb_car_counter.v|
 !i113 1
 R8
 R9
-vtb_timestamp_buffer
+vtb_cost_calculator
+R11
+!i10b 1
+!s100 E6MzC07Gnhf?a_RC6nfXV3
+R1
+IgO1l^BPR4klPhj5>zQSM43
+R2
+R3
+w1778156096
+8tb_cost_calculator.v
+Ftb_cost_calculator.v
+!i122 189
+L0 3 60
+R6
+r1
+!s85 0
+31
 R12
+Z18 !s107 tb_cost_calculator.v|cost_calculator.v|
+R13
+!i113 1
+R9
+vtb_timestamp_buffer
+R10
 !i10b 1
 !s100 H3ZA]J3m5HPee?nkWbKd@3
 R1
@@ -230,36 +274,36 @@ R3
 w1778153717
 8D:\electric_sims\intelFPGA\20.1\projects\ASPS-VP\tb_timestamp_buffer.v
 FD:\electric_sims\intelFPGA\20.1\projects\ASPS-VP\tb_timestamp_buffer.v
-!i122 163
+!i122 186
 L0 3 74
 R6
 r1
 !s85 0
 31
-R14
+R17
 !s107 D:\electric_sims\intelFPGA\20.1\projects\ASPS-VP\tb_timestamp_buffer.v|
 !s90 -reportprogress|300|-work|work|-stats=none|D:\electric_sims\intelFPGA\20.1\projects\ASPS-VP\tb_timestamp_buffer.v|
 !i113 1
 R8
 R9
 vtimestamp_buffer
-R12
+R10
 !i10b 1
 !s100 >^8dZTEmZhIc0h4_SJWHi0
 R1
 I5?=V^QVRDDK1gD^KIIkFn2
 R2
 R3
-R13
+R16
 8D:/electric_sims/intelFPGA/20.1/projects/ASPS-VP/timestamp_buffer.v
 FD:/electric_sims/intelFPGA/20.1/projects/ASPS-VP/timestamp_buffer.v
-!i122 162
+!i122 185
 L0 1 34
 R6
 r1
 !s85 0
 31
-R14
+R17
 !s107 D:/electric_sims/intelFPGA/20.1/projects/ASPS-VP/timestamp_buffer.v|
 !s90 -reportprogress|300|-work|work|-stats=none|D:/electric_sims/intelFPGA/20.1/projects/ASPS-VP/timestamp_buffer.v|
 !i113 1
