@@ -12,12 +12,33 @@ Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 
 Top level modules:
 	d_ff
 
+} {} {}} D:/electric_sims/intelFPGA/20.1/projects/ASPS-VP/timestamp_buffer.v {1 {vlog -work work -stats=none D:/electric_sims/intelFPGA/20.1/projects/ASPS-VP/timestamp_buffer.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module timestamp_buffer
+
+Top level modules:
+	timestamp_buffer
+
+} {} {}} D:/electric_sims/intelFPGA/20.1/projects/ASPS-VP/global_timer.v {1 {vlog -work work -stats=none D:/electric_sims/intelFPGA/20.1/projects/ASPS-VP/global_timer.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module global_timer
+
+Top level modules:
+	global_timer
+
 } {} {}} D:/electric_sims/intelFPGA/20.1/projects/ASPS-VP/button_conditioner.v {1 {vlog -work work -stats=none D:/electric_sims/intelFPGA/20.1/projects/ASPS-VP/button_conditioner.v
 Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
 -- Compiling module button_conditioner
 
 Top level modules:
 	button_conditioner
+
+} {} {}} D:/electric_sims/intelFPGA/20.1/projects/ASPS-VP/clock_divider.v {1 {vlog -work work -sv -stats=none D:/electric_sims/intelFPGA/20.1/projects/ASPS-VP/clock_divider.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module clock_divider
+
+Top level modules:
+	clock_divider
 
 } {} {}} D:/electric_sims/intelFPGA/20.1/projects/ASPS-VP/tb_car_counter.v {1 {vlog -work work -stats=none D:/electric_sims/intelFPGA/20.1/projects/ASPS-VP/tb_car_counter.v
 Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
