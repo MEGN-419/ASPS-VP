@@ -1,0 +1,11 @@
+# ModelSim Simulation Junk
+work/
+*.wlf
+transcript
+*.bak
+
+# Intel Quartus Junk (You will thank me for this tomorrow)
+db/
+incremental_db/
+output_files/
+*.qws

@@ -1,16 +1,23 @@
-D:/electric_sims/intelFPGA/20.1/projects/ASPS-VP/sevenSegments.v {1 {vlog -work work -stats=none D:/electric_sims/intelFPGA/20.1/projects/ASPS-VP/sevenSegments.v
+D:/electric_sims/intelFPGA/20.1/projects/ASPS-VP/tb_cost_calculator.v {1 {vlog -work work -stats=none {D:\electric_sims\intelFPGA\20.1\projects\ASPS-VP\tb_cost_calculator.v}
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module tb_cost_calculator
+
+Top level modules:
+	tb_cost_calculator
+
+} {} {}} D:/electric_sims/intelFPGA/20.1/projects/ASPS-VP/sevenSegments.v {1 {vlog -work work -stats=none D:/electric_sims/intelFPGA/20.1/projects/ASPS-VP/sevenSegments.v
 Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
 -- Compiling module sevenSegments
 
 Top level modules:
 	sevenSegments
 
-} {} {}} D:/electric_sims/intelFPGA/20.1/projects/ASPS-VP/d_ff.v {1 {vlog -work work -stats=none D:/electric_sims/intelFPGA/20.1/projects/ASPS-VP/d_ff.v
+} {} {}} D:/electric_sims/intelFPGA/20.1/projects/ASPS-VP/tb_timestamp_buffer.v {1 {vlog -work work -stats=none {D:\electric_sims\intelFPGA\20.1\projects\ASPS-VP\tb_timestamp_buffer.v}
 Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
--- Compiling module d_ff
+-- Compiling module tb_timestamp_buffer
 
 Top level modules:
-	d_ff
+	tb_timestamp_buffer
 
 } {} {}} D:/electric_sims/intelFPGA/20.1/projects/ASPS-VP/timestamp_buffer.v {1 {vlog -work work -stats=none D:/electric_sims/intelFPGA/20.1/projects/ASPS-VP/timestamp_buffer.v
 Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
@@ -19,12 +26,12 @@ Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 
 Top level modules:
 	timestamp_buffer
 
-} {} {}} D:/electric_sims/intelFPGA/20.1/projects/ASPS-VP/global_timer.v {1 {vlog -work work -stats=none D:/electric_sims/intelFPGA/20.1/projects/ASPS-VP/global_timer.v
+} {} {}} D:/electric_sims/intelFPGA/20.1/projects/ASPS-VP/synchronizer.v {1 {vlog -work work -stats=none D:/electric_sims/intelFPGA/20.1/projects/ASPS-VP/synchronizer.v
 Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
--- Compiling module global_timer
+-- Compiling module synchronizer
 
 Top level modules:
-	global_timer
+	synchronizer
 
 } {} {}} D:/electric_sims/intelFPGA/20.1/projects/ASPS-VP/button_conditioner.v {1 {vlog -work work -stats=none D:/electric_sims/intelFPGA/20.1/projects/ASPS-VP/button_conditioner.v
 Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
@@ -33,12 +40,19 @@ Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 
 Top level modules:
 	button_conditioner
 
-} {} {}} D:/electric_sims/intelFPGA/20.1/projects/ASPS-VP/clock_divider.v {1 {vlog -work work -sv -stats=none D:/electric_sims/intelFPGA/20.1/projects/ASPS-VP/clock_divider.v
+} {} {}} D:/electric_sims/intelFPGA/20.1/projects/ASPS-VP/global_timer.v {1 {vlog -work work -stats=none D:/electric_sims/intelFPGA/20.1/projects/ASPS-VP/global_timer.v
 Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
--- Compiling module clock_divider
+-- Compiling module global_timer
 
 Top level modules:
-	clock_divider
+	global_timer
+
+} {} {}} D:/electric_sims/intelFPGA/20.1/projects/ASPS-VP/car_counter_fsm.v {1 {vlog -work work -stats=none D:/electric_sims/intelFPGA/20.1/projects/ASPS-VP/car_counter_fsm.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module car_counter_fsm
+
+Top level modules:
+	car_counter_fsm
 
 } {} {}} D:/electric_sims/intelFPGA/20.1/projects/ASPS-VP/tb_car_counter.v {1 {vlog -work work -stats=none D:/electric_sims/intelFPGA/20.1/projects/ASPS-VP/tb_car_counter.v
 Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
@@ -47,25 +61,11 @@ Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 
 Top level modules:
 	tb_car_counter
 
-} {} {}} D:/electric_sims/intelFPGA/20.1/projects/ASPS-VP/synchronizer.v {1 {vlog -work work -stats=none D:/electric_sims/intelFPGA/20.1/projects/ASPS-VP/synchronizer.v
+} {} {}} D:/electric_sims/intelFPGA/20.1/projects/ASPS-VP/cost_calculator.v {1 {vlog -work work -stats=none D:/electric_sims/intelFPGA/20.1/projects/ASPS-VP/cost_calculator.v
 Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
--- Compiling module synchronizer
+-- Compiling module cost_calculator
 
 Top level modules:
-	synchronizer
-
-} {} {}} D:/electric_sims/intelFPGA/20.1/projects/ASPS-VP/edge_detector.v {1 {vlog -work work -stats=none D:/electric_sims/intelFPGA/20.1/projects/ASPS-VP/edge_detector.v
-Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
--- Compiling module edge_detector
-
-Top level modules:
-	edge_detector
-
-} {} {}} D:/electric_sims/intelFPGA/20.1/projects/ASPS-VP/car_counter_fsm.v {1 {vlog -work work -stats=none D:/electric_sims/intelFPGA/20.1/projects/ASPS-VP/car_counter_fsm.v
-Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
--- Compiling module car_counter_fsm
-
-Top level modules:
-	car_counter_fsm
+	cost_calculator
 
 } {} {}}

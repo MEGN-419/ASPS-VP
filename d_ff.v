@@ -10,3 +10,4 @@ if (!rstn)
  else
  q <= d;
 endmodule 
+//copied from labs
