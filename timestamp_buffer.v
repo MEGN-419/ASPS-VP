@@ -2,6 +2,7 @@ module timestamp_buffer(
     input clk,
     input rstn,
     input enter_pulse,
+	input exit_pulse,
     input [1:0] car_id,     //from switches       
     input [15:0] current_time,    //timer 
     output reg [15:0] saved_time   //time enterd

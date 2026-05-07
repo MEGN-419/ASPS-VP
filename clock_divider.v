@@ -14,7 +14,7 @@ CLK4Hz <= 0;
 end
 else
 begin
-if(count < 6250000)
+if(count < 5)
  count <= count + 1; // count 6.25 million
 else
  begin

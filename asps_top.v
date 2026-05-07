@@ -31,7 +31,7 @@ module asps_top(
 
     // clock divider
     clock_divider clk_div (
-        .clk(clk), .reset(rstn), .CLK4Hz(clk_4Hz) 
+        .clk(clk), .reset(~rstn), .CLK4Hz(clk_4Hz) 
     );
 
     // button conditioners
