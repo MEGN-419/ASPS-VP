@@ -62,7 +62,7 @@ module asps_top(
     );
 
     timestamp_buffer mem (
-        .clk(clk), .rstn(rstn), .enter_pulse(enter_pulse), .exit_pulse(exit_pulse), 
+        .clk(clk), .rstn(rstn), .enter_pulse(enter_pulse & ~full_flag), .exit_pulse(exit_pulse), 
         .car_id(car_id), .current_time(current_time), .saved_time(saved_time)
     );
 
@@ -74,11 +74,21 @@ module asps_top(
 		.total_cost(total_cost)
     );
 
-    // 7-segment displays
-    sevenSegments d0 (.bcd(ccount), .dec(HEX0));
-    sevenSegments d1 (.bcd(total_cost[3:0]), .dec(HEX1));
-    sevenSegments d2 (.bcd(total_cost[7:4]), .dec(HEX2));
-    sevenSegments d3 (.bcd(total_cost[11:8]), .dec(HEX3));
+   //The Display Decoders 
+    sevenSegments disp_count (
+        .bcd(ccount), .dec(HEX0)
+    );
+    
+    // Use Math to split the binary cost into decimal digits
+    sevenSegments disp_cost_low (
+        .bcd(total_cost % 10), .dec(HEX1)       
+    );
+    sevenSegments disp_cost_mid (
+        .bcd((total_cost / 10) % 10), .dec(HEX2) 
+    );
+    sevenSegments disp_cost_high (
+        .bcd((total_cost / 100) % 10), .dec(HEX3) 
+    );
 
     // leds
     assign LEDR[0] = empty_flag;
