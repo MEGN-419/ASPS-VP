@@ -36,6 +36,11 @@ module tb_asps_top;
         //tiktok - no not the app
         #200;
 
+        // --- TEST ALARM ON EMPTY ---
+        // Press Exit Button ,key  1 (illegally)
+        KEY[1] = 0; #100; // Hold down
+        KEY[1] = 1; #100; // Release
+
         //Car 1 Enter ,Set Rate to 2 L.E., Car ID to 01
         // Rate = SW[4:3], Car ID = SW[2:1]
         SW = 10'b00000_10_01_1; 
@@ -48,21 +53,31 @@ module tb_asps_top;
         #500;
 
         //Car 2 Enters Keep Rate 2 L.E., change Car ID to 10
-        SW = 10'b00000_10_10_1; 
+        SW = 10'b00000_10_10_1;
 
         // Press Entry Button
         KEY[0] = 0; #100; 
-        KEY[0] = 1; #100; 
+        KEY[0] = 1; #100;
 
         //zzzzzzzzzz....
         #500;
+        
+        //Car 3 Enters (Garage hits max capacity here!)
+        KEY[0] = 0; #100; 
+        KEY[0] = 1; #100;
+
+        // --- TEST ALARM ON FULL ---
+        // trying to enter 4th car
+        KEY[0] = 0; #100; 
+        KEY[0] = 1; #100;
 
         //Car 1 Exit, switches to Car ID 01 to check cost, then opens gate
         SW = 10'b00000_10_01_1;
         #100; // Pause to let the system calculate the cost for Car 1
         
         // Press Exit Button ,key  1
-        KEY[1] = 0; #100; 
+        KEY[1] = 0;
+        #100; 
         KEY[1] = 1; #100; 
 
         #200;

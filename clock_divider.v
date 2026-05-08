@@ -14,7 +14,7 @@ CLK4Hz <= 0;
 end
 else
 begin
-if(count < 25000)
+if(count < 25000) //<------- THIS ONE ******************************************************
  count <= count + 1; // count 6.25 million
 else
  begin
@@ -26,3 +26,11 @@ end
 // ------------------------------------------------- //
 endmodule
 //also from labs
+
+//!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+//i hate this piece of sh*t
+//ok , focuse with me 
+//if u want to synsithize the code on the fpga , SET THE IF OF LINE 17 to   exactly (* 6250000 *)
+//if u want to testbech the top , SET TO (* 5 *)
+//if u want to desim it , SET TO (* 25000 *)
+//allahuma bala8t , allahuma fashhad

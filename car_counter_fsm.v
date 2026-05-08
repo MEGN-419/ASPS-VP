@@ -3,10 +3,12 @@ module car_counter_fsm(
     input rstn,
     input enter_pulse, 
     input exit_pulse, 
-    output reg [3:0] ccount,
+    input is_vacant,     // <--- NEW INPUT: Sensor checks if the specific spot is empty!
     output empty_flag,
     output full_flag,
-    output reg alarm    // Alarm is now a clocked register!
+    output reg alarm, 
+    output valid_enter,  
+    output valid_exit    
 );
     // State Encoding
     parameter S_EMPTY = 2'b00;
@@ -16,9 +18,13 @@ module car_counter_fsm(
 
     reg [1:0] current_state, next_state;
 
-    // flag generation
+    // Flag generation
     assign empty_flag = (current_state == S_EMPTY);
     assign full_flag  = (current_state == S_FULL);
+
+    // GENERATE THE SAFE UP/DOWN PULSES
+    assign valid_enter = enter_pulse & ~full_flag;
+    assign valid_exit  = exit_pulse & ~is_vacant; // <--- CLOSES THE LOOPHOLE!
 
     // State & Sticky Alarm Memory
     always @(posedge clk or negedge rstn) begin
@@ -29,39 +35,26 @@ module car_counter_fsm(
             current_state <= next_state;
             
             // STICKY ALARM LOGIC
-            if ((current_state == S_FULL && enter_pulse) || (current_state == S_EMPTY && exit_pulse)) begin
-                alarm <= 1'b1; // Turn alarm ON if illegal move is attempted
-            end else if (enter_pulse || exit_pulse) begin
-                alarm <= 1'b0; // Turn alarm OFF when a valid move finally happens
+            if ((enter_pulse && full_flag) || (exit_pulse && is_vacant)) begin
+                alarm <= 1'b1; // Trigger alarm if full entry OR vacant exit attempted!
+            end else if (valid_enter || valid_exit) begin
+                alarm <= 1'b0; // Turn alarm OFF when a valid move happens
             end
         end
     end
 
-    // Combinational Block (Next State & Car Count)
+    // Combinational Block 
     always @(*) begin
         next_state = current_state; // default
         
         case (current_state)
-            S_EMPTY: begin
-                ccount = 4'd0;
-                if (enter_pulse) next_state = S_ONE;
-            end
-            S_ONE: begin
-                ccount = 4'd1;
-                if (enter_pulse) next_state = S_TWO;
-                else if (exit_pulse) next_state = S_EMPTY;
-            end
-            S_TWO: begin
-                ccount = 4'd2;
-                if (enter_pulse) next_state = S_FULL;
-                else if (exit_pulse) next_state = S_ONE;
-            end
-            S_FULL: begin
-                ccount = 4'd3;
-                if (exit_pulse) next_state = S_TWO;
-            end
+            S_EMPTY: if (valid_enter) next_state = S_ONE;
+            S_ONE:   if (valid_enter) next_state = S_TWO; else if (valid_exit) next_state = S_EMPTY;
+            S_TWO:   if (valid_enter) next_state = S_FULL; else if (valid_exit) next_state = S_ONE;
+            S_FULL:  if (valid_exit) next_state = S_TWO;
             default: next_state = S_EMPTY;
         endcase
     end
 
 endmodule
+//last ver : added is_vacant to prevent phantom exits!

@@ -23,11 +23,15 @@ module asps_top(
     // internal wires
     wire clk_4Hz; 
     wire enter_pulse, exit_pulse;
+    wire valid_enter, valid_exit; 
     wire [3:0] ccount;
     wire empty_flag, full_flag, alarm_flag;
     wire [15:0] current_time;
     wire [15:0] saved_time;
     wire [15:0] total_cost;
+    
+    // <--- THE FIX: System checks if the slot is actually empty! --->
+    wire is_vacant = (saved_time == 16'd0);
 
     // clock divider
     clock_divider clk_div (
@@ -36,49 +40,51 @@ module asps_top(
 
     // button conditioners
     button_conditioner btn_in (
-        .clk(clk),
-		.rstn(rstn), 
-		.raw_btn(entry_btn), 
-		.final_pulse(enter_pulse)
+        .clk(clk), .rstn(rstn), .raw_btn(entry_btn), .final_pulse(enter_pulse)
     );
     button_conditioner btn_out (
-        .clk(clk), 
-		.rstn(rstn), 
-		.raw_btn(exit_btn), 
-		.final_pulse(exit_pulse)
+        .clk(clk), .rstn(rstn), .raw_btn(exit_btn), .final_pulse(exit_pulse)
     );
 
-    // main fsm
+    // 1. THE FSM (The Traffic Cop)
     car_counter_fsm fsm (
         .clk(clk), .rstn(rstn), .enter_pulse(enter_pulse), .exit_pulse(exit_pulse), 
-        .ccount(ccount), .empty_flag(empty_flag), .full_flag(full_flag), .alarm(alarm_flag)
+        .is_vacant(is_vacant), // <--- PLUG IN THE NEW SENSOR
+        .empty_flag(empty_flag), .full_flag(full_flag), .alarm(alarm_flag),
+        .valid_enter(valid_enter), .valid_exit(valid_exit) 
+    );
+
+    // 2. THE DATAPATH COUNTER (The Math)
+    up_down_counter ud_count (
+        .clk(clk), .rstn(rstn), 
+        .up_pulse(valid_enter),   
+        .down_pulse(valid_exit),  
+        .count(ccount)            
     );
 
     // timer and memory
     global_timer timer (
-        .clk_250ms(clk_4Hz), 
-		.rstn(rstn), 
-		.current_time(current_time)
+        .clk_250ms(clk_4Hz), .rstn(rstn), .current_time(current_time)
     );
 
     timestamp_buffer mem (
-        .clk(clk), .rstn(rstn), .enter_pulse(enter_pulse & ~full_flag), .exit_pulse(exit_pulse), 
+        .clk(clk), .rstn(rstn), 
+        .enter_pulse(valid_enter), // <--- Uses the safe FSM up pulse!
+        .exit_pulse(valid_exit),   // <--- Uses the safe FSM down pulse!
         .car_id(car_id), .current_time(current_time), .saved_time(saved_time)
     );
 
     // cost math
     cost_calculator calc (
-        .current_time(current_time), 
-		.entry_time(saved_time), 
-        .cost_rate(cost_rate), 
-		.total_cost(total_cost)
+        .current_time(current_time), .entry_time(saved_time), 
+        .cost_rate(cost_rate), .total_cost(total_cost)
     );
 
-   //The Display Decoders 
+    // The Display Decoders 
     sevenSegments disp_count (
         .bcd(ccount), .dec(HEX0)
     );
-    
+
     // Use Math to split the binary cost into decimal digits
     sevenSegments disp_cost_low (
         .bcd(total_cost % 10), .dec(HEX1)       
