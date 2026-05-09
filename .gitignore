@@ -1,11 +1,14 @@
-# ModelSim Simulation Junk
-work/
+# 1. Ignore ALL folders in the root directory by default
+/*/
+
+# 2. BUT explicitly allow these specific folders to be tracked
+!de-10 docs/
+!labs/
+!sim/
+!tb/
+
+# 3. File-specific junk to ignore (from your original list)
 *.wlf
 transcript
 *.bak
-
-# Intel Quartus Junk (You will thank me for this tomorrow)
-db/
-incremental_db/
-output_files/
 *.qws

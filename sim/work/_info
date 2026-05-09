@@ -1,0 +1,408 @@
+m255
+K4
+z2
+!s11f vlog 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dD:/electric_sims/intelFPGA/20.1/projects/ASPS-VP/sim
+vasps_top
+Z1 !s110 1778347915
+!i10b 1
+!s100 A7NI2YhF9UA5WKPk5gA:V2
+Z2 !s11b Dg1SIo80bB@j0V0VzS_@n1
+IW1gLLk0Vo6aD?_6LYL6;H3
+Z3 VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1778265957
+8../asps_top.v
+F../asps_top.v
+!i122 1
+L0 1 104
+Z4 OV;L;2020.1;71
+r1
+!s85 0
+31
+Z5 !s108 1778347915.000000
+!s107 ../up_down_counter.v|../timestamp_buffer.v|../tb_up_down_counter.v|../tb_timestamp_buffer.v|../tb_cost_calculator.v|../tb_car_counter.v|../tb_asps_top.v|../synchronizer.v|../sevenSegments.v|../global_timer.v|../edge_detector.v|../d_ff.v|../cost_calculator.v|../clock_divider.v|../car_counter_fsm.v|../button_conditioner.v|../asps_top.v|
+Z6 !s90 ../asps_top.v|../button_conditioner.v|../car_counter_fsm.v|../clock_divider.v|../cost_calculator.v|../d_ff.v|../edge_detector.v|../global_timer.v|../sevenSegments.v|../synchronizer.v|../tb_asps_top.v|../tb_car_counter.v|../tb_cost_calculator.v|../tb_timestamp_buffer.v|../tb_up_down_counter.v|../timestamp_buffer.v|../up_down_counter.v|
+!i113 1
+Z7 tCvgOpt 0
+vbutton_conditioner
+R1
+!i10b 1
+!s100 6Yn@>f4ck[DZkCOz5VGPe1
+R2
+Iz1djeIE0YS3NcXNHM^]k23
+R3
+R0
+w1778142780
+8../button_conditioner.v
+F../button_conditioner.v
+!i122 1
+Z8 L0 1 23
+R4
+r1
+!s85 0
+31
+R5
+Z9 !s107 ../up_down_counter.v|../timestamp_buffer.v|../tb_up_down_counter.v|../tb_timestamp_buffer.v|../tb_cost_calculator.v|../tb_car_counter.v|../tb_asps_top.v|../synchronizer.v|../sevenSegments.v|../global_timer.v|../edge_detector.v|../d_ff.v|../cost_calculator.v|../clock_divider.v|../car_counter_fsm.v|../button_conditioner.v|../asps_top.v|
+R6
+!i113 1
+R7
+vcar_counter_fsm
+R1
+!i10b 1
+!s100 eBk09^VWYjC7UWgM?z;GJ0
+R2
+IPP4N52XM:ZgN_10KBzJ3M0
+R3
+R0
+w1778265779
+8../car_counter_fsm.v
+F../car_counter_fsm.v
+!i122 1
+L0 1 59
+R4
+r1
+!s85 0
+31
+R5
+R9
+R6
+!i113 1
+R7
+vclock_divider
+R1
+!i10b 1
+!s100 4Sz:jSHZohzeLM>:?U9f^2
+R2
+I1eVWP0NbOKigEM1U`nJSl0
+R3
+R0
+w1778347902
+8../clock_divider.v
+F../clock_divider.v
+!i122 1
+L0 1 27
+R4
+r1
+!s85 0
+31
+R5
+R9
+R6
+!i113 1
+R7
+vcost_calculator
+R1
+!i10b 1
+!s100 UPa8o1a^T89QUJ?Z>ECE70
+R2
+IF:ITn8m:]]43o>hW8i86M3
+R3
+R0
+w1778180232
+8../cost_calculator.v
+F../cost_calculator.v
+!i122 1
+L0 1 18
+R4
+r1
+!s85 0
+31
+R5
+R9
+R6
+!i113 1
+R7
+vd_ff
+R1
+!i10b 1
+!s100 hKaOBnh9g3<:ZTBjEYMl51
+R2
+I@H4;0T^58z[hDnjHVXRSU1
+R3
+R0
+Z10 w1778176600
+8../d_ff.v
+F../d_ff.v
+!i122 1
+Z11 L0 1 12
+R4
+r1
+!s85 0
+31
+R5
+R9
+R6
+!i113 1
+R7
+vedge_detector
+R1
+!i10b 1
+!s100 ]XEX]zkL8IhDO0mj`jH?40
+R2
+I8k9SZlGzYb26mVPCh[?0m0
+R3
+R0
+R10
+8../edge_detector.v
+F../edge_detector.v
+!i122 1
+R11
+R4
+r1
+!s85 0
+31
+R5
+R9
+R6
+!i113 1
+R7
+vglobal_timer
+R1
+!i10b 1
+!s100 7Y=g^HOe<YDc6JL?l_g`:3
+R2
+IRML;n2:iGdnIIfACZcTll0
+R3
+R0
+w1778151279
+8../global_timer.v
+F../global_timer.v
+!i122 1
+R11
+R4
+r1
+!s85 0
+31
+R5
+R9
+R6
+!i113 1
+R7
+vsevenSegments
+R1
+!i10b 1
+!s100 SA^iOV5`eTa>OB^PB:n3Q2
+R2
+I_7e7k@<Hi<hMoUgK<ZO1c2
+R3
+R0
+w1778139285
+8../sevenSegments.v
+F../sevenSegments.v
+!i122 1
+R8
+R4
+r1
+!s85 0
+31
+R5
+R9
+R6
+!i113 1
+R7
+nseven@segments
+vsynchronizer
+R1
+!i10b 1
+!s100 bmmU?S>GB_=z80:VFKQn71
+R2
+IXz383@:U:HVB`9JAgJ?0@0
+R3
+R0
+w1778140668
+8../synchronizer.v
+F../synchronizer.v
+!i122 1
+R11
+R4
+r1
+!s85 0
+31
+R5
+R9
+R6
+!i113 1
+R7
+vtb
+R1
+!i10b 1
+!s100 [;7`JYXbn8]7_=2e;`d;<0
+R2
+IQLAO4fa7z=F;_i6TQoTej3
+R3
+R0
+w1778183363
+8../tb/tb.v
+F../tb/tb.v
+!i122 0
+L0 7 48
+R4
+r1
+!s85 0
+31
+R5
+!s107 ../tb/tb.v|
+!s90 ../tb/tb.v|
+!i113 1
+R7
+vtb_asps_top
+R1
+!i10b 1
+!s100 dHBP^W0OX2Ld9DckO^znS3
+R2
+IgneVnK8LWzBOo`Ofo>`zX3
+R3
+R0
+w1778262530
+8../tb_asps_top.v
+F../tb_asps_top.v
+!i122 1
+L0 3 89
+R4
+r1
+!s85 0
+31
+R5
+R9
+R6
+!i113 1
+R7
+vtb_car_counter
+R1
+!i10b 1
+!s100 7oVLg9;Fhj8Z6]PjdQMEn1
+R2
+I>CPM?eC;T2Y@b49W>@c;l2
+R3
+R0
+Z12 w1778260751
+8../tb_car_counter.v
+F../tb_car_counter.v
+!i122 1
+L0 3 52
+R4
+r1
+!s85 0
+31
+R5
+R9
+R6
+!i113 1
+R7
+vtb_cost_calculator
+R1
+!i10b 1
+!s100 E6MzC07Gnhf?a_RC6nfXV3
+R2
+IP4WnkAD64eZB1@@jNiJF42
+R3
+R0
+w1778156096
+8../tb_cost_calculator.v
+F../tb_cost_calculator.v
+!i122 1
+L0 3 60
+R4
+r1
+!s85 0
+31
+R5
+R9
+R6
+!i113 1
+R7
+vtb_timestamp_buffer
+R1
+!i10b 1
+!s100 DEIKl55=D;WQPNJKIH@Io1
+R2
+IRXH;6B>[goL2h0Dj_fTfR3
+R3
+R0
+R12
+8../tb_timestamp_buffer.v
+F../tb_timestamp_buffer.v
+!i122 1
+L0 3 63
+R4
+r1
+!s85 0
+31
+R5
+R9
+R6
+!i113 1
+R7
+vtb_up_down_counter
+R1
+!i10b 1
+!s100 n::Y=g;H?mRW^VnOM2PVD2
+R2
+IXnZkQK:MZIhO?]]L_9Lk00
+R3
+R0
+Z13 w1778260305
+8../tb_up_down_counter.v
+F../tb_up_down_counter.v
+!i122 1
+L0 3 34
+R4
+r1
+!s85 0
+31
+R5
+R9
+R6
+!i113 1
+R7
+vtimestamp_buffer
+R1
+!i10b 1
+!s100 5gZ]OCGe=Zm>;1QJ@f0><1
+R2
+I`4]O<dTWLE=>S_bJioNO^3
+R3
+R0
+w1778184531
+8../timestamp_buffer.v
+F../timestamp_buffer.v
+!i122 1
+L0 1 45
+R4
+r1
+!s85 0
+31
+R5
+R9
+R6
+!i113 1
+R7
+vup_down_counter
+R1
+!i10b 1
+!s100 Wg^dmRWi8Dl3UA_Hh5oBA2
+R2
+IicD]4P8c0B>FjP3kL6OoE1
+R3
+R0
+R13
+8../up_down_counter.v
+F../up_down_counter.v
+!i122 1
+L0 1 57
+R4
+r1
+!s85 0
+31
+R5
+R9
+R6
+!i113 1
+R7
